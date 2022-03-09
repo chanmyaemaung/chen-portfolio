@@ -1,0 +1,48 @@
+import { Button, Typography } from '@mui/material'
+import ContactMailIcon from '@mui/icons-material/ContactMail'
+
+export default function Information({ title, tags }) {
+	return (
+		<>
+			{/* Main Title */}
+			<Typography
+				variant='h3'
+				component='h1'
+				textAlign='center'
+				fontFamily='Kurale'
+				mt={4}
+				fontSize='1.5rem'
+				fontWeight='bold'
+				sx={{ textDecoration: 'underline' }}
+			>
+				{title ?? 'Chen Lay'}
+			</Typography>
+			{/* Sub Title */}
+			<Typography
+				component='p'
+				variant='subtitle2'
+				textAlign='center'
+				fontFamily='Quicksand'
+				gutterBottom
+			>
+				{tags ?? 'Software Engineer'}
+			</Typography>
+			{/* Contact Button */}
+			<Button
+				fullWidth
+				variant='contained'
+				size='medium'
+				startIcon={<ContactMailIcon />}
+				onClick={() => console.log("You'd clicked the button")}
+				sx={{
+					background: '#082640',
+					color: '#fff',
+					mt: 2,
+					fontFamily: 'Poppins',
+				}}
+			>
+				Get in touch
+			</Button>
+		</>
+	)
+}
