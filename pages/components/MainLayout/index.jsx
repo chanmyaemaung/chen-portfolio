@@ -8,7 +8,7 @@ import { useGlobalContextApi } from '@context/apiContext'
 const styles = {
 	root: {
 		width: '100vw',
-		height: '100vh',
+		height: '100%',
 		background: `url('/assets/images/bg.jpeg')`,
 		backgroundRepeat: 'no-repeat',
 		backgroundSize: 'cover',
