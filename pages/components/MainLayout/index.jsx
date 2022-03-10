@@ -2,6 +2,7 @@ import Head from 'next/head'
 import NoSsr from '@mui/material/NoSsr'
 import MyAppBar from '../Navbar'
 import { Box, CssBaseline } from '@mui/material'
+import { useGlobalContextApi } from '@context/apiContext'
 
 // styles for main layout
 const styles = {
@@ -17,6 +18,8 @@ const styles = {
 }
 
 const MainLayout = ({ title, keywords, description, children }) => {
+	const { portfolio } = useGlobalContextApi()
+
 	return (
 		<>
 			<Head>
@@ -24,10 +27,10 @@ const MainLayout = ({ title, keywords, description, children }) => {
 					name='viewport'
 					content='initial-scale=1.0, maximum-scale=1.0, user-scalable=no'
 				/>
-				<title>{title}</title>
+				<title>{`${title || portfolio.title} - Portfolio`}</title>
 				<meta charSet='utf-8' />
 				<meta name='keywords' content={keywords} />
-				<meta name='description' content={description} />
+				<meta name='description' content={description || portfolio.tags} />
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 			<NoSsr>

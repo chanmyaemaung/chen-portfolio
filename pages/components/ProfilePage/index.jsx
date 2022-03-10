@@ -4,16 +4,16 @@ import SocialIcons from './SocialIcons'
 import EducationWorks from './EducationWorks'
 import Summary from './Summary'
 import Information from './Information'
+import { useGlobalContextApi } from '@context/apiContext'
 
 // Static Image
 const imgUrl = '/assets/images/myLogo.png'
 
-const ProfilePage = (props) => {
-	// Destructuring Props
-	const {
-		socialMediaLink,
-		portfolio: { title, image, tags, about, company, education },
-	} = props
+const ProfilePage = () => {
+	const { portfolio } = useGlobalContextApi()
+
+	// Extract image from context
+	const { image } = portfolio
 
 	return (
 		<Container maxWidth='sm'>
@@ -33,13 +33,13 @@ const ProfilePage = (props) => {
 					/>
 				</Stack>
 				{/* Information */}
-				<Information title={title} tags={tags} />
+				<Information />
 				{/* Summery Description */}
-				<Summary about={about} />
+				<Summary />
 				{/* Work and Education */}
-				<EducationWorks company={company} education={education} />
+				<EducationWorks />
 				{/* Social Media Icons */}
-				<SocialIcons {...socialMediaLink} />
+				<SocialIcons />
 			</Stack>
 		</Container>
 	)

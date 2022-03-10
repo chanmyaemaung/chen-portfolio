@@ -4,8 +4,14 @@ import FacebookTwoToneIcon from '@mui/icons-material/FacebookTwoTone'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import InstagramIcon from '@mui/icons-material/Instagram'
 import TwitterIcon from '@mui/icons-material/Twitter'
+import { useGlobalContextApi } from '@context/apiContext'
 
-export default function SocialIcons({ facebook, instagram, twitter, github }) {
+export default function SocialIcons() {
+	const { socialMediaLink } = useGlobalContextApi()
+
+	// Extract image from context
+	const { facebook, instagram, twitter, github } = socialMediaLink
+
 	return (
 		<Stack
 			direction='row'

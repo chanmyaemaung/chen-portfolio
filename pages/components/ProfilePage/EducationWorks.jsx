@@ -1,6 +1,12 @@
+import { useGlobalContextApi } from '@context/apiContext'
 import { Grid, Typography } from '@mui/material'
 
-export default function EducationWorks({ company, education }) {
+export default function EducationWorks() {
+	const { portfolio } = useGlobalContextApi()
+
+	// Extract image from context
+	const { company, education } = portfolio
+
 	return (
 		<Grid container spacing={1}>
 			<Grid item xs={12} sm={6} md={6}>

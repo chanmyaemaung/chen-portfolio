@@ -1,7 +1,13 @@
 import { Button, Typography } from '@mui/material'
 import ContactMailIcon from '@mui/icons-material/ContactMail'
+import { useGlobalContextApi } from '@context/apiContext'
 
-export default function Information({ title, tags }) {
+export default function Information() {
+	const { portfolio } = useGlobalContextApi()
+
+	// Extract image from context
+	const { title, tags } = portfolio
+
 	return (
 		<>
 			{/* Main Title */}
