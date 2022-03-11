@@ -39,7 +39,7 @@ export default function Information() {
 				variant='contained'
 				size='medium'
 				startIcon={<ContactMailIcon />}
-				onClick={() => console.log("You'd clicked the button")}
+				onClick={() => window.open('mailto:info@chanmyaemaung.net', '_parent')}
 				sx={{
 					background: '#082640',
 					color: '#fff',

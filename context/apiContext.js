@@ -32,4 +32,4 @@ const ApiContextProvider = ({ children }) => {
 
 // Export as global
 export const useGlobalContextApi = () => useContext(ApiContext)
-export { ApiContext, ApiContextProvider }``
+export { ApiContext, ApiContextProvider }

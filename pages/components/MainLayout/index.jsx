@@ -1,14 +1,12 @@
 import Head from 'next/head'
-import NoSsr from '@mui/material/NoSsr'
-import MyAppBar from '../Navbar'
-import { Box, CssBaseline } from '@mui/material'
+import { Box } from '@mui/material'
 import { useGlobalContextApi } from '@context/apiContext'
 
 // styles for main layout
 const styles = {
 	root: {
 		width: '100vw',
-		height: '100%',
+		height: '100vh',
 		background: `url('/assets/images/bg.jpeg')`,
 		backgroundRepeat: 'no-repeat',
 		backgroundSize: 'cover',
@@ -33,21 +31,16 @@ const MainLayout = ({ title, keywords, description, children }) => {
 				<meta name='description' content={description || portfolio.tags} />
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
-			<NoSsr>
-				<Box sx={styles.root}>
-					<CssBaseline />
-					<MyAppBar />
-					{children}
-				</Box>
-			</NoSsr>
+
+			<Box sx={styles.root}>{children}</Box>
 		</>
 	)
 }
-
-export default MainLayout
 
 MainLayout.defaultProps = {
 	title: 'Chen Lay',
 	keywords: 'chenlay, chanmyaemaung, chanlaymcmm, mgchan, mgchen',
 	description: 'This is my very little simple own Portfolio Page',
 }
+
+export default MainLayout
