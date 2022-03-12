@@ -9,10 +9,20 @@ function NotFound() {
 	return (
 		<MainLayout>
 			<Box sx={styles.root}>
-				<Typography component='h1' variant='h4' gutterBottom>
+				<Typography
+					component='h1'
+					variant='h4'
+					gutterBottom
+					fontFamily='Quicksand'
+				>
 					404 Not Found!
 				</Typography>
-				<Typography component='p' variant='body' gutterBottom>
+				<Typography
+					component='p'
+					variant='body'
+					gutterBottom
+					fontFamily='Poppins'
+				>
 					Sorry, there is nothing here!
 				</Typography>
 				<Button
@@ -21,6 +31,7 @@ function NotFound() {
 					size='small'
 					variant='contained'
 					color='info'
+					sx={{ my: 2 }}
 				>
 					Go back home
 				</Button>

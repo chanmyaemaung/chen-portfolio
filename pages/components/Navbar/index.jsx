@@ -12,6 +12,7 @@ import MenuIcon from '@mui/icons-material/Menu'
 import WorkspacesIcon from '@mui/icons-material/Workspaces'
 import CloudDownloadIcon from '@mui/icons-material/CloudDownload'
 import { Tooltip } from '@mui/material'
+import { useRouter } from 'next/router'
 
 function HideOnScroll(props) {
 	const { children, window } = props
@@ -39,6 +40,8 @@ HideOnScroll.propTypes = {
 }
 
 export default function MyAppBar(props) {
+	const { push } = useRouter()
+
 	return (
 		<React.Fragment>
 			<CssBaseline />
@@ -55,7 +58,11 @@ export default function MyAppBar(props) {
 							<MenuIcon />
 						</IconButton>
 						<Box sx={{ flexGrow: 1 }}></Box>
-						<Tooltip title='See all my projects' arrow>
+						<Tooltip
+							title='See all my projects'
+							arrow
+							onClick={() => push('/portfolio')}
+						>
 							<Button color='inherit' startIcon={<WorkspacesIcon />}>
 								Projects
 							</Button>

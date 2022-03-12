@@ -7,7 +7,7 @@ const styles = {
 	root: {
 		width: '100vw',
 		height: '100vh',
-		background: `url('/assets/images/bg.jpeg')`,
+		backgroundImage: `url('/assets/images/bg.jpeg')`,
 		backgroundRepeat: 'no-repeat',
 		backgroundSize: 'cover',
 		backgroundPosition: 'center',
