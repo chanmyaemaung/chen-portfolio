@@ -25,6 +25,7 @@ const PortFolio = () => {
 					<Typography
 						gutterBottom
 						mb={3}
+						textAlign='center'
 						fontSize='2rem'
 						fontWeight='bold'
 						fontFamily='Quicksand'
