@@ -1,20 +1,23 @@
 import styled from '@emotion/styled'
+import CircularProgress from '@mui/material/CircularProgress'
 
 export default function LaunchScreen() {
 	return (
 		<SplashScreenContainer>
 			<SplashTitle>Wait for a while...</SplashTitle>
+			<CircularProgress color='warning' />
 		</SplashScreenContainer>
 	)
 }
 
 const SplashScreenContainer = styled.div`
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
 	width: 100vw;
-	background-color: rgba(0, 0, 0, 0.9);
+	background-color: rgba(0, 0, 0, 0.6);
 `
 const SplashTitle = styled.h1`
 	font-family: 'Quicksand', sans-serif;
