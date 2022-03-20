@@ -23,6 +23,11 @@ const GlobalStyle = css`
 	.myLogo {
 		border-radius: 50%;
 	}
+
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
 `
 
 export default GlobalStyle
