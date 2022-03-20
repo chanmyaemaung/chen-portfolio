@@ -5,7 +5,7 @@ export default function LaunchScreen() {
 	return (
 		<SplashScreenContainer>
 			<SplashTitle>Wait for a while...</SplashTitle>
-			<CircularProgress color='warning' />
+			<CircularProgress variant='indeterminate' sx={{ color: '#082640' }} />
 		</SplashScreenContainer>
 	)
 }

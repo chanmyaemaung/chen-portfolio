@@ -30,6 +30,7 @@ export default function Information() {
 				textAlign='center'
 				fontFamily='Quicksand'
 				gutterBottom
+				mt={2}
 			>
 				{tags ?? 'Software Engineer'}
 			</Typography>

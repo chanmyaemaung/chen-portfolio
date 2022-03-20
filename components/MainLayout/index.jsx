@@ -4,16 +4,17 @@ import { useGlobalContextApi } from '@context/apiContext'
 
 // Static Image
 const imgUrl = '/assets/images/myLogo.png'
+const localImg = '/assets/images/bg.jpeg'
 
 // styles for main layout
 const styles = {
 	root: {
-		width: '100vw',
-		height: '100vh',
-		backgroundImage: `url('/assets/images/bg.jpeg')`,
+		width: '100%',
+		height: '100%',
+		backgroundImage: `url(${localImg})`,
 		backgroundRepeat: 'no-repeat',
 		backgroundSize: 'cover',
-		backgroundPosition: 'center',
+		backgroundPosition: 'center center',
 		backgroundAttachment: 'fixed',
 	},
 }
