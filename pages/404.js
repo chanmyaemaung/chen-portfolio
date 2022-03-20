@@ -1,13 +1,13 @@
 import { Box, Button, Typography } from '@mui/material'
-import MainLayout from './components/MainLayout'
 import CottageOutlinedIcon from '@mui/icons-material/CottageOutlined'
 import { useRouter } from 'next/router'
+import MainLayout from '@components/MainLayout'
 
 function NotFound() {
 	const { push } = useRouter()
 
 	return (
-		<MainLayout>
+		<MainLayout title='Not Found'>
 			<Box sx={styles.root}>
 				<Typography
 					component='h1'
@@ -46,7 +46,7 @@ const styles = {
 		flexDirection: 'column',
 		justifyContent: 'center',
 		alignItems: 'center',
-		width: '100vw',
+		width: '100%',
 		height: 'calc(100vh - 70px)',
 		p: 3,
 	},
